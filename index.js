@@ -4,6 +4,9 @@ const config = require('./config/config');
 const app = express();
 const port = config.server.port;
 
+// Register middleware
+app.use(express.json())
+
 //Register routes
 helper
     .fileList('./src/routes')
